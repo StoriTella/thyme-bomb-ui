@@ -1,8 +1,16 @@
 <!-- character-creation.component.html -->
 
 <div class="character-creation-container">
+    <button class="submit-button" (click)="back()">Back</button>
     <h2>Character Creation</h2>
     <form [formGroup]="characterForm" class="character-form">
+      <div class="form-group">
+        <label for="valueUser">Current Power level:</label>
+        <input type="range" [disabled]="true" id="powerLevel" [value]="this.calculateTotalValue()" min="8" max="80">
+        <span>{{ this.calculateTotalValue() }}</span>
+      </div>
+      <div class="warning" *ngIf="showMaxValueWarning">You need to remove {{this.warningMaxValue()}} points!!!</div>
+      <div class="warning" *ngIf="showMinValueWarning">You can put more {{this.warningMinValue()}} points!!!</div>
       <div class="form-group">
         <label for="attackMax">Attack Max:</label>
         <input type="range" id="attackMax" formControlName="attackMax" min="1" max="10">
@@ -43,7 +51,7 @@
         <input type="range" id="chanceGold" formControlName="chanceGold" min="1" max="10">
         <span>{{ characterForm.value.chanceGold }}</span>
       </div>
-      <button class="submit-button" (click)="saveCharacter()">Save Character</button>
+      <button class="submit-button" (click)="saveCharacter()" [disabled]="showMaxValueWarning || warningMinValue">Save Character</button>
     </form>
   </div>
   

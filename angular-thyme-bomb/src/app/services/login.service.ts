@@ -8,23 +8,28 @@ export class LoginService {
   
   user!: User;
   isLoggedIn: boolean = false;
+  maxValueUser: number = 40;
 
   getUser(): any {
     return this.user;
+  }
+
+  setUser(user: User) {
+    this.user = user;
   }
 
   login(username: string): boolean {
     //mock user
     this.user = {
       username: username,
-      attack_max: 3,
-      attack_min: 2,
-      defense_max: 3,
-      defense_min: 2,
-      chance_attack: 5,
-      chance_defense: 5,
-      chance_item: 2,
-      chance_gold: 2,
+      attackMax: 10,
+      attackMin: 5,
+      defenseMax: 5,
+      defenseMin: 2,
+      chanceAttack: 5,
+      chanceDefense: 3,
+      chanceItem: 5,
+      chanceGold: 5,
     }
     this.isLoggedIn = true;
     return true;
