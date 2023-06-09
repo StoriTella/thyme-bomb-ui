@@ -29,4 +29,8 @@ export class LoginService {
     this.isLoggedIn = true;
     return true;
   }
+
+  logout() {
+    this.isLoggedIn = false;
+  }
 }

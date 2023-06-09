@@ -1,1 +1,49 @@
-<p>character works!</p>
+<!-- character-creation.component.html -->
+
+<div class="character-creation-container">
+    <h2>Character Creation</h2>
+    <form [formGroup]="characterForm" class="character-form">
+      <div class="form-group">
+        <label for="attackMax">Attack Max:</label>
+        <input type="range" id="attackMax" formControlName="attackMax" min="1" max="10">
+        <span>{{ characterForm.value.attackMax }}</span>
+      </div>
+      <div class="form-group">
+        <label for="attackMin">Attack Min:</label>
+        <input type="range" id="attackMin" formControlName="attackMin" min="1" max="10">
+        <span>{{ characterForm.value.attackMin }}</span>
+      </div>
+      <div class="form-group">
+        <label for="defenseMax">Defense Max:</label>
+        <input type="range" id="defenseMax" formControlName="defenseMax" min="1" max="10">
+        <span>{{ characterForm.value.defenseMax }}</span>
+      </div>
+      <div class="form-group">
+        <label for="defenseMin">Defense Min:</label>
+        <input type="range" id="defenseMin" formControlName="defenseMin" min="1" max="10">
+        <span>{{ characterForm.value.defenseMin }}</span>
+      </div>
+      <div class="form-group">
+        <label for="chanceAttack">Chance of Attack:</label>
+        <input type="range" id="chanceAttack" formControlName="chanceAttack" min="1" max="10">
+        <span>{{ characterForm.value.chanceAttack }}</span>
+      </div>
+      <div class="form-group">
+        <label for="chanceDefense">Chance of Defense:</label>
+        <input type="range" id="chanceDefense" formControlName="chanceDefense" min="1" max="10">
+        <span>{{ characterForm.value.chanceDefense }}</span>
+      </div>
+      <div class="form-group">
+        <label for="chanceItem">Chance of Item:</label>
+        <input type="range" id="chanceItem" formControlName="chanceItem" min="1" max="10">
+        <span>{{ characterForm.value.chanceItem }}</span>
+      </div>
+      <div class="form-group">
+        <label for="chanceGold">Chance of Gold:</label>
+        <input type="range" id="chanceGold" formControlName="chanceGold" min="1" max="10">
+        <span>{{ characterForm.value.chanceGold }}</span>
+      </div>
+      <button class="submit-button" (click)="saveCharacter()">Save Character</button>
+    </form>
+  </div>
+  

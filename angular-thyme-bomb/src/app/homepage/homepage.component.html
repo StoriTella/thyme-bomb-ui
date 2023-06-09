@@ -1,2 +1,7 @@
-<a routerLink="/homepage">Go to Homepage</a>
-<a routerLink="/user">Go to User</a>
+<div class="home-page">
+    <h1>Welcome to the Home Page</h1>
+    <button class="logout-button" (click)="logout()">Logout</button>
+    <button class="character-button" routerLink="/user">Go to Character</button>
+    <button class="create-room-button" routerLink="/create-room">Create Room</button>
+    <button class="join-room-button" routerLink="/join-room">Join Room</button>
+  </div>
