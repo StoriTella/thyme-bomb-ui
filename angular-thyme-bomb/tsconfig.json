@@ -2,13 +2,17 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": 
+      { "path": 
+        [ "./node_modules/path-browserify" ]
+      },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
+    //"noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
@@ -28,6 +32,17 @@
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    "types" : ["node"],
+    "paths": {
+      "crypto": ["./node_modules/crypto-browserify"],
+      "stream": ["./node_modules/stream-browserify"],
+      "assert": ["./node_modules/assert"],
+      "http": ["./node_modules/stream-http"],
+      "https": ["./node_modules/https-browserify"],
+      "tty": ["./node_modules/tty-browserify"],
+      "zlib": ["./node_modules/browserify-zlib"],
+      "os": ["./node_modules/os-browserify/browser"],
+    }
   }
 }
