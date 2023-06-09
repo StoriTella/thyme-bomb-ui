@@ -2,6 +2,8 @@
     <h1>Welcome to the Home Page</h1>
     <button class="logout-button" (click)="logout()">Logout</button>
     <button class="character-button" routerLink="/user">Go to Character</button>
-    <button class="create-room-button" routerLink="/create-room">Create Room</button>
-    <button class="join-room-button" routerLink="/join-room">Join Room</button>
+    <button class="create-room-button" [disabled]="true" routerLink="/create-room">Create Room (TODO)</button>
+    <button class="join-room-button" [disabled]="true" routerLink="/join-room">Join Room (TODO)</button>
+    <button class="shop-room" [disabled]="true">Shop (TODO)</button>
+    <button class="inventory-room"  [disabled]="true">Inventory (TODO)</button>
   </div>
