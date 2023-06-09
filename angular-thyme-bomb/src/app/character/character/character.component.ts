@@ -107,4 +107,5 @@ export class CharacterComponent {
   back() {
     this.router.navigateByUrl('/homepage');
   }
+
 }
